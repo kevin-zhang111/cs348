@@ -1,6 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
-import Library from './components/Library';
+import Artists from './components/Artists';
+import Songs from './components/Songs';
+import Users from './components/Users';
 
 function App() {
   return (
@@ -12,14 +14,22 @@ function App() {
               <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to='/library'>Library</Link>
+              <Link to='/artists'>Artists</Link>
+            </li>
+            <li>
+              <Link to='/songs'>Songs</Link>
+            </li>
+            <li>
+              <Link to='/users'>Users</Link>
             </li>
           </ul>
         </header>
         <main>
           <Routes>
             <Route path='/' />
-            <Route path='/library' element={<Library/>}/>
+            <Route path='/artists' element={<Artists/>}/>
+            <Route path='/songs' element={<Songs/>}/>
+            <Route path='/users' element={<Users/>}/>
           </Routes>
         </main>
       </Router>

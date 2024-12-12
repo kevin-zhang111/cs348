@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export default function Library() {
+export default function Artists() {
     const [artists, setArtists] = useState([])
 
     useEffect(() => {
@@ -14,16 +14,16 @@ export default function Library() {
 
     return (
         <div>
-            <h1>Library</h1>
+            <h1>Artists</h1>
             <ul>
                 {artists.map((artist, index) => (
-                    <li key={index} style={{paddingBottom: '25px'}}>
-                        <div>{artist.artist_name}</div>
-                        <div>{artist.genre}</div>
-                        <div>{artist.popularity_score}</div>
+                    <li key={index} style={{ paddingBottom: '25px' }}>
+                        <div>Artist Name: {artist.artist_name}</div>
+                        <div>Genre: {artist.genre}</div>
+                        <div>Popularity Score: {artist.popularity_score}</div>
                     </li>
                 ))}
             </ul> 
         </div>
-    )
+    );
 }
